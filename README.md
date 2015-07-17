@@ -1,36 +1,36 @@
-# Metalsmith JSTransformer Plugin [![NPM version](https://img.shields.io/npm/v/metalsmith-jstransformer.svg)](https://www.npmjs.org/package/metalsmith-jstransformer)
+# Metalsmith JSON Feed Plugin [![NPM version](https://img.shields.io/npm/v/metalsmith-json-feed.svg)](https://www.npmjs.org/package/metalsmith-json-feed)
 
-[![Build Status](https://img.shields.io/travis/RobLoach/metalsmith-jstransformer/master.svg)](https://travis-ci.org/RobLoach/metalsmith-jstransformer)
-[![Dependency Status](https://david-dm.org/RobLoach/metalsmith-jstransformer.png)](https://david-dm.org/RobLoach/metalsmith-jstransformer)
+[![Build Status](https://img.shields.io/travis/RobLoach/metalsmith-json-feed/master.svg)](https://travis-ci.org/RobLoach/metalsmith-json-feed)
+[![Dependency Status](https://david-dm.org/RobLoach/metalsmith-json-feed.png)](https://david-dm.org/RobLoach/metalsmith-json-feed)
 
-[Metalsmith](http://metalsmith.io) plugin to process files with any [JSTransformer](http://github.com/jstransformers).
+[Metalsmith](http://metalsmith.io) plugin to process files with any [json-feed](http://github.com/json-feeds).
 
 ## Installation
 
-    npm install --save metalsmith-jstransformer
+    npm install --save metalsmith-json-feed
 
 ## Usage
 
-Create files that you would like to act on with JSTransformers with file extensions representing the transformer to use, in the format `example.html.<transformer>`. For example, if you would like to process with Jade, you would name it `example.html.jade`.
+Create files that you would like to act on with json-feeds
 
-Use multiple transformers by appending additional file extension transformer names at the end. For example, to [HTML-Minifier](https://github.com/jstransformers/jstransformer-html-minifier) our Jade example above, you would use the filename `example.html.html-minifier.jade`.
+### Example
 
+#### `src/feed.html`
 ```
-example.html.html-minifier.jade
-example.html.html-minifier
-example.html
+---
+json_feed: http://example.com/rest
+layout: mylayout.swig
+---
 ```
-
-Jade -> HTML-Minifier -> example.html
 
 ### CLI
 
-If you are using the command-line version of Metalsmith, you can install via npm, and then add the `metalsmith-jstransformer` key to your `metalsmith.json` file:
+If you are using the command-line version of Metalsmith, you can install via npm, and then add the `metalsmith-json-feed` key to your `metalsmith.json` file:
 
 ```json
 {
   "plugins": {
-    "metalsmith-jstransformer": {}
+    "metalsmith-json-feed": {}
   }
 }
 ```
@@ -40,9 +40,9 @@ If you are using the command-line version of Metalsmith, you can install via npm
 If you are using the JS Api for Metalsmith, then you can require the module and add it to your `.use()` directives:
 
 ```js
-var jstransformer = require('metalsmith-jstransformer');
+var feed = require('metalsmith-json-feed');
 
-metalsmith.use(jstransformer());
+metalsmith.use(feed());
 ```
 
 ## License
