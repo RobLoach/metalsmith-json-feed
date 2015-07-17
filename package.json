@@ -1,0 +1,39 @@
+{
+  "name": "metalsmith-json-feed",
+  "version": "0.0.1",
+  "description": "Metalsmith JSON Feed Plugin",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "standard index.js test/index.js; mocha --no-timeouts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RobLoach/metalsmith-json-feed"
+  },
+  "keywords": [
+    "metalsmith"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobLoach/metalsmith-json-feed/issues"
+  },
+  "homepage": "https://github.com/RobLoach/metalsmith-json-feed",
+  "dependencies": {
+    "async": "^1.3.0",
+    "clone": "^1.0.2",
+    "extend": "^3.0.0",
+    "request": "^2.58.0"
+  },
+  "devDependencies": {
+    "assert-dir-equal": "1.*",
+    "jstransformer-swig": "^0.1.2",
+    "metalsmith": "1.*",
+    "metalsmith-jstransformer-layouts": "^0.3.0",
+    "metalsmith-templates": "^0.7.0",
+    "mocha": "*",
+    "standard": "4.*",
+    "swig": "^1.4.2"
+  }
+}
