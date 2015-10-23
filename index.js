@@ -32,11 +32,11 @@ module.exports = function (opts) {
           return done(e)
         }
         for (var i in results) {
-          console.log(results[i])
           var newFile = clone(files[file])
           var newFilename = results[i].uuid[0].value + '.html'
           newFile.contents = results[i].body[0].value
-          files[newFilename] = extend({}, newFile, results[i])
+          newFile.title = results[i].title[0].value
+          files[newFilename] = extend({}, results[i], newFile)
         }
         done()
       })

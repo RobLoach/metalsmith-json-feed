@@ -29,11 +29,11 @@
   "devDependencies": {
     "assert-dir-equal": "1.*",
     "jstransformer-swig": "^0.1.2",
-    "metalsmith": "1.*",
+    "metalsmith": "2.*",
     "metalsmith-jstransformer-layouts": "^0.3.0",
     "metalsmith-templates": "^0.7.0",
     "mocha": "*",
-    "standard": "4.*",
+    "standard": "5.*",
     "swig": "^1.4.2"
   }
 }
